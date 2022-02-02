@@ -1,24 +1,41 @@
 import React from "react";
-
+import Navbar from "./navbar.jsx";
+import Jumbotron from "./Jumbotron.jsx";
+import Card from "./Card.jsx";
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+/* import rigoImage from "../../img/rigo-baby.jpg"; */
 
 //create your first component
 const Home = () => {
 	return (
 		<div>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<Navbar />
+			<div className="container pb-4">
+				<Jumbotron />
+				<div className="row">
+					<div className="col">
+						<Card />
+					</div>
+					<div className="col">
+						<Card />
+					</div>
+					<div className="col">
+						<Card />
+					</div>
+					<div className="col">
+						<Card />
+					</div>
+				</div>
+			</div>
+			<footer className="footer mt-auto py-3 bg-dark">
+				<div className="container">
+					<p className="text-center">
+						<span className="text-muted">
+							Place sticky footer content here.
+						</span>
+					</p>
+				</div>
+			</footer>
 		</div>
 	);
 };
